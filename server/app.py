@@ -1,6 +1,3 @@
-from decorators import expose
-
-
 class Vehicle:
     """
     Represents a general vehicle with common properties and methods.
@@ -23,14 +20,12 @@ class Vehicle:
         self.model = model
         self.fuel_type = fuel_type
 
-    @expose
     def start_engine(self):
         """
         Starts the vehicle's engine.
         """
         print(f"Starting the {self.make} {self.model}'s engine.")
 
-    @expose
     def stop_engine(self):
         """
         Stops the vehicle's engine.
@@ -58,14 +53,12 @@ class Car(Vehicle):
         super().__init__(make, model, fuel_type)
         self.num_doors = num_doors
 
-    @expose
     def lock_doors(self):
         """
         Locks the car's doors.
         """
         print(f"Locking the doors of the {self.make} {self.model} car.")
 
-    @expose
     def unlock_doors(self):
         """
         Unlocks the car's doors.
@@ -93,7 +86,6 @@ class Driver:
         self.name = name
         self.driving_license = driving_license
 
-    @expose
     def show_driving_license_info(self):
         """
         Displays the driver's name and driving_license information.
@@ -122,10 +114,14 @@ class License:
         self.license_number = license_number
         self.expiration_date = expiration_date
 
-    @expose
     def display_info(self):
         """
         Displays the license number and expiration date.
         """
         print(f"License Number: {self.license_number}")
         print(f"Expiration Date: {self.expiration_date}")
+
+
+# if __name__ == "__main__":
+#     driving_license = License("1545JGJH", "10-10-2030")
+#     driving_license.display_info()
