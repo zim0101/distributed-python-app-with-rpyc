@@ -120,8 +120,3 @@ class License:
         """
         print(f"License Number: {self.license_number}")
         print(f"Expiration Date: {self.expiration_date}")
-
-
-# if __name__ == "__main__":
-#     driving_license = License("1545JGJH", "10-10-2030")
-#     driving_license.display_info()
